@@ -30,17 +30,18 @@ h1, h2, h3 {
     font-weight: normal;
 }
 
-
 header#top {
-    position: relative;
-    width: 1920px;
-    height: 480px;
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)), 
-                url('/img/a6034ccb-b6f5-49b5-b285-88cfeaf3f168.png') no-repeat center/cover;
+    background-color: #1e1b4b4b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 2.5rem 6%;
     color: #ffffff;
+    z-index: 1000;
 }
 
 header .logo {
@@ -60,9 +61,12 @@ header nav a {
 }
 
 .hero {
-    position: absolute;
-    top: 140px;
-    left: 6%;
+    padding: 143px 6% 80px; 
+    display: flex;
+    min-height: 510px;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)), 
+                url('../img/a6034ccb-b6f5-49b5-b285-88cfeaf3f168.png') no-repeat center/cover;
+    width: 100%;
     color: #ffffff;
 }
 
@@ -97,13 +101,11 @@ header nav a {
     border-radius: 30px;
 }
 
-
 main {
-    width: 1920px;
-    padding: 0 300px;
+    width: 100%;
+    padding: 0 15.6%;
 }
 
-/* 3. 프로필 카드 */
 .profile {
     background-color: #ffffff;
     border-radius: 16px;
@@ -123,7 +125,7 @@ main {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background: url('/img/246423ff-6585-411f-ae9d-3279e7231305.webp') no-repeat center;
+    background: url('../img/246423ff-6585-411f-ae9d-3279e7231305.webp') no-repeat center;
     background-size: cover;
     color: #6C5CE7;
     display: flex;
@@ -177,14 +179,13 @@ main {
     font-weight: 700;
 }
 
-
 #posts article {
     background-color: #ffffff;
     border-radius: 16px;
     padding: 2.5rem;
     margin-bottom: 2rem;
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     
     display: flex;
     align-items: center;
@@ -194,7 +195,6 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     transition: transform 0.2s;
 }
-
 
 #posts article:nth-child(even) {
     flex-direction: row-reverse;
@@ -210,17 +210,16 @@ main {
     background-size: cover;
 }
 
-
 #posts .post1 .thumb {
-    background-image: url(/img/YGkEbXmVk2ATH1WhAVfXPzHug4h7FdIBD4JIn4_uatoh3t1mANvmbroisFkOA7DambI-BX7NWEAxCI3CcW9hHMthd6EAXfPII80Xa6ACnKqX1nao7wApb-1ccorx5Yp0eH95BQBSLS3hjunqql71L94stJexmB4wNavk1s7G1pCtdVVoGYc7mHpcYFK-p9Y3.jpeg);
+    background-image: url(../img/YGkEbXmVk2ATH1WhAVfXPzHug4h7FdIBD4JIn4_uatoh3t1mANvmbroisFkOA7DambI-BX7NWEAxCI3CcW9hHMthd6EAXfPII80Xa6ACnKqX1nao7wApb-1ccorx5Yp0eH95BQBSLS3hjunqql71L94stJexmB4wNavk1s7G1pCtdVVoGYc7mHpcYFK-p9Y3.jpeg);
 }
 
 #posts .post2 .thumb {
-    background-image: url(/img/OAbuitTa8AYIgIP6w8mEWaLNuZxzhjtyZ20J30Cz0-b_GCA64HW-UEItqJMh98AsZgAxpuFV7fLDXChduw2S53FCjbCxQz8rNEJQX7uWfU8IPqsQbN5-VK-50Bj_kXLNkHnsYxHd3Sq_p-XpmLEe4e9qIHhVf-sTLSN785HEPCDAD7G2S4SPrcWDr9dxOn6H.jpeg);
+    background-image: url(../img/OAbuitTa8AYIgIP6w8mEWaLNuZxzhjtyZ20J30Cz0-b_GCA64HW-UEItqJMh98AsZgAxpuFV7fLDXChduw2S53FCjbCxQz8rNEJQX7uWfU8IPqsQbN5-VK-50Bj_kXLNkHnsYxHd3Sq_p-XpmLEe4e9qIHhVf-sTLSN785HEPCDAD7G2S4SPrcWDr9dxOn6H.jpeg);
 }
 
 #posts .post3 .thumb {
-    background-image: url(/img/nji4S1bP8wiaJRxDqQWL7v3I7V1JWAL0y0vWfsPi-E8i1Xab3GfUHN-Xxvjt5KlgqiUJQBCRFEmkhxbZN6vzdIMcbCUPgbRFFDp33CgI4zDWSnZahT0Ias1-PpHGvomeNIQHC-p5zzjvUmIsdDziTXskwLbXFlb19JvWsAJ9RYW766tQWChWk2ws6MTjtK2F.jpeg);
+    background-image: url(../img/nji4S1bP8wiaJRxDqQWL7v3I7V1JWAL0y0vWfsPi-E8i1Xab3GfUHN-Xxvjt5KlgqiUJQBCRFEmkhxbZN6vzdIMcbCUPgbRFFDp33CgI4zDWSnZahT0Ias1-PpHGvomeNIQHC-p5zzjvUmIsdDziTXskwLbXFlb19JvWsAJ9RYW766tQWChWk2ws6MTjtK2F.jpeg);
 }
 
 #posts article .info {
@@ -257,7 +256,7 @@ main {
     font-weight: 700;
 }
 
- #photos {
+#photos {
     margin-bottom: 6rem;
     width: 100%;
 }
@@ -274,7 +273,7 @@ main {
     width: 100%;                  
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(2, 189px);  
-    gap: 19px                             
+    gap: 19px;                           
 }
 
 .photos li {
@@ -320,28 +319,29 @@ main {
 .photos .p1 { 
     grid-column: 1; 
     grid-row: 1 / 3; 
-    background-image: url(/img/4zo5UJkdFaVq-CXmpMd3V-xw9CmQfhpB1dAjnRfgLn6f61-iSkZmbPbyySPIqa8Lw2bDllcs6KdSTDiXns2mP5Un6Z4W23ZsXmlRDU63XaGUpq7A8gFOC-Pa42AfTR0BKt5YkWtlGjMzcSYd3NI86tdRqz7Cfpg2b9a4rupQQ5ksxGrJCzdOzFJEfnmEf08t.jpeg);
+    background-image: url(../img/4zo5UJkdFaVq-CXmpMd3V-xw9CmQfhpB1dAjnRfgLn6f61-iSkZmbPbyySPIqa8Lw2bDllcs6KdSTDiXns2mP5Un6Z4W23ZsXmlRDU63XaGUpq7A8gFOC-Pa42AfTR0BKt5YkWtlGjMzcSYd3NI86tdRqz7Cfpg2b9a4rupQQ5ksxGrJCzdOzFJEfnmEf08t.jpeg);
 }
 
 .photos .p2 { 
     grid-column: 2; 
     grid-row: 1; 
-    background-image: url(/img/Im6-F2-yQ0VJ5uulQhWTF1EqZIRxY2dkfu9Zeo1HobIJHtgPyruZJcJvhfXSQkSr1JuWGb5tFZ47ULBBkDCDOcDbHl05uazgjinlufp61j8nJaiVwlLqZ5ZBVfN7Px4AYUc5lPBZRNARXT_DNUcrsKd1YnYswwmFiy0SRv4Ale5zs8OtcPurpBAIiH8R0qB2.jpeg);
+    background-image: url(../img/Im6-F2-yQ0VJ5uulQhWTF1EqZIRxY2dkfu9Zeo1HobIJHtgPyruZJcJvhfXSQkSr1JuWGb5tFZ47ULBBkDCDOcDbHl05uazgjinlufp61j8nJaiVwlLqZ5ZBVfN7Px4AYUc5lPBZRNARXT_DNUcrsKd1YnYswwmFiy0SRv4Ale5zs8OtcPurpBAIiH8R0qB2.jpeg);
 }
 
 .photos .p3 { 
     grid-column: 2; 
     grid-row: 2; 
-    background-image: url(/img/Q7hIpz-3KNY28eAeMcmPV0IKZatyh-AMZFUFLa0pAyGV-UWsPfRUeyQ-bOD7xUhDZ2-Q9JQlfq4PXiy9nc1MGNocNR8Ae1uVQPvfrMk0FvgL8mNdu89kfjMKYM3CmsMyi9El0-EYZT-IvtOAjPdPJ3X7yK5NdhMx-txiGylwx_GcNUFrKqYgvCkJAwGw-n0d.jpeg);
+    background-image: url(../img/Q7hIpz-3KNY28eAeMcmPV0IKZatyh-AMZFUFLa0pAyGV-UWsPfRUeyQ-bOD7xUhDZ2-Q9JQlfq4PXiy9nc1MGNocNR8Ae1uVQPvfrMk0FvgL8mNdu89kfjMKYM3CmsMyi9El0-EYZT-IvtOAjPdPJ3X7yK5NdhMx-txiGylwx_GcNUFrKqYgvCkJAwGw-n0d.jpeg);
 }
 
 .photos .p4 { 
     grid-column: 3; 
     grid-row: 1 / 3; 
-    background-image: url(/img/CPzKZMxr3JoDtMKg5VXIHZkR_etNQtz9-2NTcRLnXe6ZbMxlG88QaYf0LlBBkp_60pSREmMinax2Qr4oNC5Z-i-BpViEJBElRVrNDMRDuk-OKA5GSc91N4qDOdIfkUL8N2KQmGn5hT82UE6zdFyW9mCpxxlIhxdqC99vPCGRqPBJLP77H6ALDQsA9foI14QO.jpeg);
+    background-image: url(../img/CPzKZMxr3JoDtMKg5VXIHZkR_etNQtz9-2NTcRLnXe6ZbMxlG88QaYf0LlBBkp_60pSREmMinax2Qr4oNC5Z-i-BpViEJBElRVrNDMRDuk-OKA5GSc91N4qDOdIfkUL8N2KQmGn5hT82UE6zdFyW9mCpxxlIhxdqC99vPCGRqPBJLP77H6ALDQsA9foI14QO.jpeg);
 }
+
 footer {
-    width: 1920px;
+    width: 100%;
     background-color: #1E1B4B;
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
