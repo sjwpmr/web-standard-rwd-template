@@ -20,12 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 내비게이션 메뉴 클릭 시 해당 섹션으로 부드러운 스크롤
     const navLinks = document.querySelectorAll('header nav a');
     const sections = [
         document.querySelector('#posts'),
         document.querySelector('#photos'),
-        document.querySelector('.profile')
+        document.querySelector('#gaids')
     ];
 
     navLinks.forEach((link, index) => {
@@ -37,3 +36,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+
+
+const tabs=document.querySelectorAll('.guide-tabs li ')
+const contents= document.querySelectorAll('.guide-content li')
+
+
+init(0)
+
+function init(num){
+    tabs[num].classList.add('on')
+    contents[num].classList.add('on')
+}
+
+function reset(){
+    for(let i=0 ;i<tabs.length;i++){
+        
+        tabs[i].classList.remove('on')
+        contents[i].classList.remove('on')
+    }
+}
+
+
+tabs.forEach(function(tab,i){
+    tab.addEventListener('click',function(){
+        console.log(i)
+        reset()
+        init(i)
+    })
+
+})

@@ -378,3 +378,137 @@ body.scroll .top {
 }
 
 
+
+
+
+
+#gaids h2 {
+    font-size: 3rem;
+    color: #1F1A3A;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.guide-tabs {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2.4rem;
+}
+
+.guide-tabs button {
+    padding: 1rem 2.4rem;
+    border: none;
+    border-radius: 3rem;
+    background-color: #ffffff;
+    color: #5b4bd6;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.guide-tabs li.on button {
+    background-color: #1e1b4b;
+    color: #ffffff;
+}
+
+.guide-content {
+    display: flex;
+    gap: 1.6rem;
+    height: 30rem;
+}
+
+.guide-content li {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.2rem;
+    padding: 2.4rem;
+    border-radius: 1.6rem;
+    background-color: #ede9fe;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.4s, background-color 0.4s;
+}
+
+.guide-content .num {
+    position: absolute;
+    top: 2rem;
+    right: 2.4rem;
+    font-size: 3.2rem;
+    color: #c7c2ff;
+}
+
+.guide-content .badge {
+    position: absolute;
+    top: 2rem;
+    left: 2.4rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    background-color: #ffd45c;
+    color: #1e1b4b;
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-1rem);
+    transition: 0.4s;
+}
+
+.guide-content h3 {
+    font-size: 2.4rem;
+    color: #1e1b4b;
+}
+
+.guide-content p {
+    font-size: 1.4rem;
+    color: #5b4bd6;
+}
+
+
+.guide-content li.on {
+    flex: 2.2;
+    background-color: #1e1b4b;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.guide-content li:nth-child(1).on {
+    background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
+                      url(/img/images.jpeg);
+}
+
+.guide-content li:nth-child(2).on {
+    background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
+                      url(/img/images\ \(1\).jpeg);
+}
+
+.guide-content li:nth-child(3).on {
+    background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
+                      url(/img/images\ \(2\).jpeg);
+}
+
+.guide-content li:nth-child(4).on {
+    background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
+                      url(/img/images\ \(3\).jpeg);
+}
+
+.guide-content li.on .badge {
+    opacity: 1;
+    transform: none;
+}
+
+.guide-content li.on h3 {
+    color: #ffffff;
+}
+
+.guide-content li.on p {
+    color: #e0e7ff;
+}
+
+.guide-content li.on .num {
+    color: #ffd45c;
+}
