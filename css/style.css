@@ -353,8 +353,9 @@ footer {
     position: fixed;
     right: 1.5rem;
     bottom: 5rem;
-    width: 5.6rem;
-    height: 5.6rem;
+    width: 7.6rem;
+    height: 7.6rem;
+    font-size: 1.8rem;
     display: block;
     background-color: #7C6CF2;
     border-radius: 50%;
