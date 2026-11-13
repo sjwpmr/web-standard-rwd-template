@@ -61,6 +61,7 @@ function reset(){
 }
 
 
+
 tabs.forEach(function(tab,i){
     tab.addEventListener('click',function(){
         console.log(i)
@@ -69,3 +70,20 @@ tabs.forEach(function(tab,i){
     })
 
 })
+contents.forEach(function(tab,i){
+    tab.addEventListener('click',function(){
+        console.log(i)
+        reset()
+        init(i)
+    })
+
+})
+
+const mNavBtn = document.querySelector('.mob-nav-btn');
+
+if (mNavBtn) {
+    mNavBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.body.classList.toggle('m-nav-open');
+    });
+}
