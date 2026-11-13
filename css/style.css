@@ -331,7 +331,7 @@ main {
 .photos .p3 { 
     grid-column: 2; 
     grid-row: 2; 
-    background-image: url(../img/Q7hIpz-3KNY28eAeMcmPV0IKZatyh-AMZFUFLa0pAyGV-UWsPfRUeyQ-bOD7xUhDZ2-Q9JQlfq4PXiy9nc1MGNocNR8Ae1uVQPvfrMk0FvgL8mNdu89kfjMKYM3CmsMyi9El0-EYZT-IvtOAjPdPJ3X7yK5NdhMx-txiGylwx_GcNUFrKqYgvCkJAwGw-n0d.jpeg);
+    background-image: url(./img/Q7hIpz-3KNY28eAeMcmPV0IKZatyh-AMZFUFLa0pAyGV-UWsPfRUeyQ-bOD7xUhDZ2-Q9JQlfq4PXiy9nc1MGNocNR8Ae1uVQPvfrMk0FvgL8mNdu89kfjMKYM3CmsMyi9El0-EYZT-IvtOAjPdPJ3X7yK5NdhMx-txiGylwx_GcNUFrKqYgvCkJAwGw-n0d.jpeg);
 }
 
 .photos .p4 { 
@@ -479,22 +479,22 @@ body.scroll .top {
 
 .guide-content li:nth-child(1).on {
     background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
-                      url(/img/images.jpeg);
+                      url(../img/images.jpeg);
 }
 
 .guide-content li:nth-child(2).on {
     background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
-                      url(/img/images\ \(1\).jpeg);
+                      url(../img/images\ \(1\).jpeg);
 }
 
 .guide-content li:nth-child(3).on {
     background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
-                      url(/img/images\ \(2\).jpeg);
+                      url(../img/images\ \(2\).jpeg);
 }
 
 .guide-content li:nth-child(4).on {
     background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
-                      url(/img/images\ \(3\).jpeg);
+                      url(../img/images\ \(3\).jpeg);
 }
 
 .guide-content li.on .badge {
