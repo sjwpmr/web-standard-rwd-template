@@ -319,6 +319,19 @@
     #posts article .info h3 {
         font-size: 2.4rem;
     }
+    .top{
+        position: fixed;
+    right: 1.1rem;
+    bottom: 5rem;
+    width: 4.1rem;
+    height: 4.1rem;
+    display: block;
+    background-color: #7C6CF2;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    z-index: 100;
+    }
 
     footer p {
         font-size: 1.3rem;

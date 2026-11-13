@@ -364,6 +364,7 @@ footer {
     opacity: 0;
     transition: .3s;
     transform: translateY(30px);
+     z-index: 100;
 }
 
 body.scroll .top {
