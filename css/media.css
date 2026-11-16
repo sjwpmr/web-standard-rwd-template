@@ -331,6 +331,7 @@
         justify-content: center;
         padding: 0 1.6rem;
         box-sizing: border-box;
+           padding: 0 5rem;
     }
 
     .hero-text {
@@ -514,5 +515,11 @@
         font-size: 1.2rem;
         line-height: 1.6;
         overflow-wrap: anywhere;
+    }
+    header nav ul{
+        gap: 0;
+    }
+    .profile{
+        margin-top: -80px;
     }
 }

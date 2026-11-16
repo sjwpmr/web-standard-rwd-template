@@ -102,5 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: true
         });
     }
-
+document.querySelectorAll('.hero .swiper-slide .inner').forEach(inner => {
+    inner.addEventListener('click', () => {
+        inner.classList.add('closed');
+    });
+});
 });
