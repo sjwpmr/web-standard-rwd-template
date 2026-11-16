@@ -1,4 +1,6 @@
+
 document.addEventListener('DOMContentLoaded', () => {
+
     const body = document.querySelector('body');
     const topBtn = document.querySelector('.top');
 
@@ -13,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (topBtn) {
         topBtn.addEventListener('click', (e) => {
             e.preventDefault();
+
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -21,69 +24,83 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const navLinks = document.querySelectorAll('header nav a');
-    const sections = [
-        document.querySelector('#posts'),
-        document.querySelector('#photos'),
-        document.querySelector('#gaids')
-    ];
 
-    navLinks.forEach((link, index) => {
+    navLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (sections[index]) {
-                sections[index].scrollIntoView({ behavior: 'smooth' });
+            const target = document.querySelector(link.getAttribute('href'));
+
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
         });
     });
-});
 
+    const tabs = document.querySelectorAll('.guide-tabs li');
+    const contents = document.querySelectorAll('.guide-content li');
 
-
-
-
-const tabs=document.querySelectorAll('.guide-tabs li ')
-const contents= document.querySelectorAll('.guide-content li')
-
-
-init(0)
-
-function init(num){
-    tabs[num].classList.add('on')
-    contents[num].classList.add('on')
-}
-
-function reset(){
-    for(let i=0 ;i<tabs.length;i++){
-        
-        tabs[i].classList.remove('on')
-        contents[i].classList.remove('on')
+    function init(num) {
+        if (tabs[num] && contents[num]) {
+            tabs[num].classList.add('on');
+            contents[num].classList.add('on');
+        }
     }
-}
 
+    function reset() {
+        tabs.forEach((tab) => {
+            tab.classList.remove('on');
+        });
 
+        contents.forEach((content) => {
+            content.classList.remove('on');
+        });
+    }
 
-tabs.forEach(function(tab,i){
-    tab.addEventListener('click',function(){
-        console.log(i)
-        reset()
-        init(i)
-    })
+    if (tabs.length > 0 && contents.length > 0) {
+        init(0);
 
-})
-contents.forEach(function(tab,i){
-    tab.addEventListener('click',function(){
-        console.log(i)
-        reset()
-        init(i)
-    })
+        tabs.forEach((tab, i) => {
+            tab.addEventListener('click', () => {
+                reset();
+                init(i);
+            });
+        });
 
-})
+        contents.forEach((content, i) => {
+            content.addEventListener('click', () => {
+                reset();
+                init(i);
+            });
+        });
+    }
 
-const mNavBtn = document.querySelector('.mob-nav-btn');
+    const mNavBtn = document.querySelector('.mob-nav-btn');
 
-if (mNavBtn) {
-    mNavBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.body.classList.toggle('m-nav-open');
-    });
-}
+    if (mNavBtn) {
+        mNavBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.body.classList.toggle('m-nav-open');
+        });
+    }
+
+    const gallery = document.querySelector('.gallery');
+
+    if (gallery && typeof Swiper !== 'undefined') {
+        new Swiper('.gallery', {
+            navigation: {
+                nextEl: '.gallery .swiper-button-next',
+                prevEl: '.gallery .swiper-button-prev'
+            },
+
+            pagination: {
+                el: '.gallery .swiper-pagination',
+                clickable: true
+            },
+
+            loop: true
+        });
+    }
+
+});

@@ -1,19 +1,40 @@
+
 .mob-nav-btn {
     display: none;
 }
 
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 58%;
+    }
 
-@media screen and (max-width: 1080px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     main {
-        max-width: 1080px;
+        width: 100%;
+        max-width: 108rem;
         margin: 0 auto;
         padding: 0 2rem;
+        box-sizing: border-box;
+    }
+
+    .inner {
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     header#top {
         flex-direction: row;
         justify-content: space-between;
-        padding: 2.5rem 6%;
+        padding: 2rem 4%;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        font-size: 2.6rem;
     }
 
     header nav a {
@@ -24,9 +45,16 @@
 
     .profile {
         flex-direction: row;
-        height: 152px;
-        padding: 0 3.2rem;
+        height: auto;
+        min-height: 15.2rem;
+        padding: 2rem 3rem;
         text-align: left;
+        font-size: 1.4rem;
+        box-sizing: border-box;
+    }
+
+    .profile h2 {
+        font-size: 2.4rem;
     }
 
     .profile .avatar {
@@ -35,10 +63,13 @@
 
     .profile .tags {
         margin-right: 0;
+        font-size: 1.2rem;
     }
 
     #posts article {
         flex-direction: row;
+        gap: 2rem;
+        min-width: 0;
     }
 
     #posts article:nth-child(even) {
@@ -46,15 +77,40 @@
     }
 
     #posts article .thumb {
-        width: 400px;
-        height: 220px;
+        width: 40%;
+        height: 22rem;
+        flex-shrink: 0;
+    }
+
+    #posts article .info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    #posts article .info h3 {
+        font-size: 2.2rem;
+    }
+
+    #posts article .info p {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+
+    #posts article .info a {
+        font-size: 1.3rem;
     }
 
     .photos {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 220px);
-        gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(2, 22rem);
+        gap: 1.5rem;
+    }
+
+    .photos li {
+        min-width: 0;
+        height: 100%;
+        font-size: 1.4rem;
     }
 
     .photos .p1,
@@ -63,11 +119,11 @@
     .photos .p4 {
         grid-column: auto;
         grid-row: auto;
-        height: 100%;
     }
 
     #gaids h2 {
         text-align: center;
+        font-size: 2.8rem;
     }
 
     .guide-tabs {
@@ -79,38 +135,75 @@
         background-color: #ffffff;
     }
 
+    .guide-tabs button {
+        font-size: 1.3rem;
+    }
+
     .guide-content {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         height: auto;
         padding: 2rem;
         border-radius: 2rem;
         background-color: #ffffff;
+        box-sizing: border-box;
     }
 
     .guide-content li {
         flex: none;
+        min-width: 0;
         min-height: 22rem;
+        font-size: 1.3rem;
+    }
+
+    .guide-content li h3 {
+        font-size: 1.8rem;
+    }
+
+    .guide-content li p {
+        font-size: 1.3rem;
+        line-height: 1.6;
     }
 
     .guide-content li.on {
         flex: none;
     }
-.top {
-    position: fixed;
-    right: 1.5rem;
-    bottom: 5rem;
-    width: 5.6rem;
-    height: 5.6rem;
-    font-size: 1.4em;
+
+    .top {
+        position: fixed;
+        right: 1.5rem;
+        bottom: 5rem;
+        width: 5rem;
+        height: 5rem;
+        font-size: 1.3rem;
     }
-} 
 
+    footer {
+        width: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
 
+    footer p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+}
 
-@media screen and (max-width: 375px) {
-    .inner, main {
+@media screen and (max-width: 768px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .inner,
+    main {
+        width: 100%;
+        max-width: 100%;
         padding: 0 1.6rem;
+        box-sizing: border-box;
     }
 
     header#top {
@@ -144,7 +237,7 @@
         width: 100%;
         height: 2px;
         background-color: #ffffff;
-        transition: all .3s;
+        transition: all 0.3s;
     }
 
     .mob-nav-btn span:nth-child(1) {
@@ -166,8 +259,12 @@
         top: 100%;
         width: 100%;
         backdrop-filter: blur(5px);
-        background: linear-gradient(180deg, rgba(0, 0, 0, .92) 0%, rgba(0, 0, 0, 0.258) 100%);
-        transition: all .3s;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.258) 100%
+        );
+        transition: all 0.3s;
         transform: translateX(110%);
         opacity: 0;
     }
@@ -191,6 +288,7 @@
         display: block;
         padding: 1.4rem 0;
         color: #ffffff;
+        font-size: 1.4rem;
     }
 
     .m-nav-open header#top {
@@ -218,13 +316,33 @@
     }
 
     .hero {
-        padding: 120px 1.6rem 60px;
+        width: 100%;
         justify-content: center;
         text-align: center;
     }
 
+    .hero .swiper-slide {
+        width: 100%;
+    }
+
+    .hero .swiper-slide .inner {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        padding: 0 1.6rem;
+        box-sizing: border-box;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
     .hero-text h2 {
-        font-size: 3.4rem;
+        font-size: 3.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.4rem;
     }
 
     .hero-text .btn {
@@ -233,11 +351,22 @@
 
     .profile {
         flex-direction: column;
+        width: 100%;
         height: auto;
+        min-height: 0;
         padding: 2.5rem 1.6rem;
-        margin-top: -30px;
+        margin-top: -3rem;
         text-align: center;
         gap: 1.2rem;
+        box-sizing: border-box;
+    }
+
+    .profile h2 {
+        font-size: 2.2rem;
+    }
+
+    .profile p {
+        font-size: 1.3rem;
     }
 
     .profile .avatar {
@@ -252,31 +381,49 @@
 
     #posts article,
     #posts article:nth-child(even) {
+        display: flex;
         flex-direction: column;
+        width: 100%;
         padding: 1.6rem;
         gap: 1.6rem;
+        box-sizing: border-box;
     }
 
     #posts article .thumb {
         width: 100%;
-        height: 200px;
+        max-width: 100%;
+        height: 20rem;
+        flex-shrink: 0;
     }
 
     #posts article .info {
         width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    #posts article .info h3 {
+        font-size: 2.2rem;
+    }
+
+    #posts article .info p {
+        font-size: 1.3rem;
+        line-height: 1.6;
     }
 
     .photos {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto;
+        width: 100%;
         gap: 1.2rem;
     }
 
     .photos li {
-        height: 180px;
-    }
-    header nav ul{
-        gap: 0;
+        width: 100%;
+        height: 18rem;
+        min-width: 0;
+        box-sizing: border-box;
     }
 
     .photos .p1,
@@ -287,33 +434,51 @@
         grid-row: auto;
     }
 
-    .thumb {
-        width: 295px;
-        height: 180px;
+    /* 별 보기 가이드 */
+    #gaids h2 {
+        font-size: 2.4rem;
+        text-align: center;
     }
 
     .guide-tabs {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         width: 100%;
         border-radius: 1.6rem;
+        box-sizing: border-box;
     }
 
     .guide-tabs button {
         width: 100%;
         padding: 1rem 0.8rem;
         font-size: 1.2rem;
+        box-sizing: border-box;
     }
 
     .guide-content {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
         gap: 1.2rem;
         padding: 1.6rem;
+        box-sizing: border-box;
     }
 
     .guide-content li {
+        width: 100%;
+        min-width: 0;
         min-height: auto;
         padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .guide-content li h3 {
+        font-size: 1.8rem;
+    }
+
+    .guide-content li p {
+        font-size: 1.3rem;
+        line-height: 1.6;
     }
 
     .guide-content li:not(.on) p {
@@ -324,25 +489,30 @@
         min-height: 24rem;
     }
 
-    #posts article .info h3 {
-        font-size: 2.4rem;
-    }
-    .top{
+    .top {
         position: fixed;
-    right: 1.1rem;
-    bottom: 5rem;
-    width: 4.1rem;
-    height: 4.1rem;
-    display: block;
-    background-color: #7C6CF2;
-    border-radius: 50%;
-    text-align: center;
-    align-content: center;
-    font-size: 10px;
-    z-index: 100;
+        right: 1.1rem;
+        bottom: 2rem;
+        width: 4.1rem;
+        height: 4.1rem;
+        display: block;
+        background-color: #7C6CF2;
+        border-radius: 50%;
+        text-align: center;
+        align-content: center;
+        font-size: 1rem;
+        z-index: 100;
+    }
+
+    footer {
+        width: 100%;
+        padding: 2rem 1.6rem;
+        box-sizing: border-box;
     }
 
     footer p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
     }
 }
