@@ -317,24 +317,48 @@
         transform: translateY(-50%) rotate(-35deg);
     }
 
-    .hero {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
+  .hero {
+    width: 100%;
+}
 
-    .hero .swiper-slide {
-        width: 100%;
-    }
+.hero .swiper-slide {
+    width: 100%;
+}
 
-    .hero .swiper-slide .inner {
-        width: 100%;
-        max-width: 100%;
-        justify-content: center;
-        padding: 0 1.6rem;
-        box-sizing: border-box;
-           padding: 0 5rem;
-    }
+.hero .swiper-slide .inner {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 5rem;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.hero .swiper-slide.s01 .inner {
+    justify-content: flex-start;
+}
+
+.hero .swiper-slide.s02 .inner {
+    justify-content: center;
+}
+
+.hero .swiper-slide.s03 .inner {
+    justify-content: flex-end;
+}
+
+.hero .swiper-slide.s01 .hero-text .btn {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.hero .swiper-slide.s02 .hero-text .btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero .swiper-slide.s03 .hero-text .btn {
+    margin-left: auto;
+    margin-right: 0;
+}
 
     .hero-text {
         max-width: 100%;

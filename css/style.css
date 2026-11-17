@@ -586,3 +586,25 @@ body.scroll .top {
 .swiper-button-next:after, .swiper-button-prev:after{
     display: none;
  }
+.hero-text{
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    padding: 1.5rem;
+}
+.hero .swiper-slide.s01 .hero-text {
+    align-items: flex-start;
+    text-align: left;
+}
+
+
+.hero .swiper-slide.s02 .hero-text {
+    align-items: center;
+    text-align: center;
+}
+
+.hero .swiper-slide.s03 .hero-text {
+    align-items: flex-end;
+    text-align: right;
+}
