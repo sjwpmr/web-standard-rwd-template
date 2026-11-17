@@ -90,7 +90,7 @@ header nav a {
 .hero .swiper-slide.s02 {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)),
-        url("../img/images (4).jpeg");
+        url("../img/images04.jpeg");
 }
 
 .hero .swiper-slide.s03 {
@@ -553,17 +553,17 @@ body.scroll .top {
 
 .guide-content li:nth-child(2).on {
     background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
-                      url(../img/images\ \(1\).jpeg);
+                      url(../img/images01.jpeg);
 }
 
 .guide-content li:nth-child(3).on {
     background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
-                      url(../img/images\ \(2\).jpeg);
+                      url(../img/images02.jpeg);
 }
 
 .guide-content li:nth-child(4).on {
     background-image: linear-gradient(to top, rgba(30, 27, 75, 0.92), rgba(30, 27, 75, 0.25)),
-                      url(../img/images\ \(3\).jpeg)
+                      url(../img/images03.jpeg);
 }
 
 .guide-content li.on .badge {
