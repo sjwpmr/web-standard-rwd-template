@@ -328,7 +328,7 @@
 .hero .swiper-slide .inner {
     width: 100%;
     max-width: 100%;
-    padding: 0 5rem;
+    padding: 0.2rem;
     box-sizing: border-box;
     display: flex;
 }
@@ -461,7 +461,7 @@
         grid-row: auto;
     }
 
-    /* 별 보기 가이드 */
+
     #gaids h2 {
         font-size: 2.4rem;
         text-align: center;
